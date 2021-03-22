@@ -19,8 +19,9 @@ model.print_model_info()
 model.visualize_model()
 
 alpha, a_probs = model.forward(input_seq)
-beta, b_probs = model.backward(input_seq)
 hmm.print_forward_result(alpha, a_probs)
+
+beta, b_probs = model.backward(input_seq)
 hmm.print_backward_result(beta, b_probs)
 
 path, delta, phi = model.viterbi(input_seq)
