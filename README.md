@@ -45,45 +45,45 @@ Classes
         emission_matrix (2-D list): A matrix containing the emission probabilities.
         title (str): Title for the HMM project. Output files will be named with this attribute.
 
-    ### Methods
+### Methods
 
-    `backward(self, input_seq)`
-    :   Runs the Backward Algorithm.
-        
-        Args:
-            input_seq (list): A list of the observed input sequence.
-        
-        Returns:
-            beta (np.array): A matrix of the beta values.
-            probs (numpy.float64): The computed probability of the input sequence.
+`backward(self, input_seq)`
+:   Runs the Backward Algorithm.
 
-    `forward(self, input_seq)`
-    :   Runs the Forward Algorithm.
-        
-        Args:
-            input_seq (list): A list of the observed input sequence.
-        
-        Returns:
-            alpha (np.array): A matrix of the alpha values.
-            probs (numpy.float64): The computed probability of the input sequence.
+    Args:
+        input_seq (list): A list of the observed input sequence.
 
-    `print_model_info(self)`
-    :   Prints the model in a readable manner.
+    Returns:
+        beta (np.array): A matrix of the beta values.
+        probs (numpy.float64): The computed probability of the input sequence.
 
-    `visualize_model(self, output_dir='outputs', notebook=False)`
-    :   Creates a transition and emission graph of the model.
-        
-        Args:
-            output_dir (str): A directory will be created with this name. If the directory already exists then an error will be raised.
-            notebook (bool): Whether the model should be visualized for a notebook or a script. If False, then a png will be displayed. If True then the output will be displayed in the IPython cell.
+`forward(self, input_seq)`
+:   Runs the Forward Algorithm.
 
-    `viterbi(self, input_seq)`
-    :   Runs the Viterbi Algorithm.
-        
-        Args:
-            input_seq (list): A list of the observed input sequence.
-        
-        Returns:
-            path (np.array): The output path for given input sequence.
-            delta (np.array): A matrix of the delta values.
-            phi (numpy.array): A matrix of the phi values.
+    Args:
+        input_seq (list): A list of the observed input sequence.
+
+    Returns:
+        alpha (np.array): A matrix of the alpha values.
+        probs (numpy.float64): The computed probability of the input sequence.
+
+`print_model_info(self)`
+:   Prints the model in a readable manner.
+
+`visualize_model(self, output_dir='outputs', notebook=False)`
+:   Creates a transition and emission graph of the model.
+
+    Args:
+        output_dir (str): A directory will be created with this name. If the directory already exists then an error will be raised.
+        notebook (bool): Whether the model should be visualized for a notebook or a script. If False, then a png will be displayed. If True then the output will be displayed in the IPython cell.
+
+`viterbi(self, input_seq)`
+:   Runs the Viterbi Algorithm.
+
+    Args:
+        input_seq (list): A list of the observed input sequence.
+
+    Returns:
+        path (np.array): The output path for given input sequence.
+        delta (np.array): A matrix of the delta values.
+        phi (numpy.array): A matrix of the phi values.
