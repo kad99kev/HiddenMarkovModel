@@ -1,0 +1,6 @@
+networkx==2.5
+matplotlib==3.3.4
+graphviz==0.16
+pandas==1.2.1
+numpy==1.18.5
+ipython==7.21.0
