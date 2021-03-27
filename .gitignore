@@ -129,4 +129,6 @@ dmypy.json
 .pyre/
 
 # Ignore default outputs
-outputs
+simple_demo
+pos_demo
+state
