@@ -26,94 +26,14 @@ pip install -r requirements.txt
 python main.py
 ```
 
-Below you will find the documentation for the module. You can also find it [here](https://kad99kev.github.io/HiddenMarkovModel/).
+You can find the documentation for the module [here](https://kad99kev.github.io/HiddenMarkovModel/).
 
-Module hmm
-==========
+# References
 
-Functions
----------
+1. [Introduction to Hidden Markov Models with Python Networkx and Sklearn](http://www.blackarbs.com/blog/introduction-hidden-markov-models-python-networkx-sklearn/2/9/2017)
 
-    
-`print_backward_result(beta, b_prob)`
-:   Prints the result of the Backward Algorithm.
-    
-    Args:
-        beta (np.array): A matrix of the beta values.
-        b_prob (numpy.float64): The computed probability from the beta values.
+2. [Part of Speech (POS) tagging with Hidden Markov Model](https://www.mygreatlearning.com/blog/pos-tagging/)
 
-    
-`print_forward_result(alpha, a_prob)`
-:   Prints the result of the Forward Algorithm.
-    
-    Args:
-        alpha (np.array): A matrix of the alpha values.
-        a_prob (numpy.float64): The computed probability from the alpha values.
+3. [Hidden Markov Models](https://web.stanford.edu/~jurafsky/slp3/A.pdf)
 
-    
-`print_viterbi_result(input_seq, observable_states, hidden_states, path, delta, phi)`
-:   Prints the result of the Viterbi Algorithm.
-    
-    Args:
-        input_seq (list): A list of the observed input sequence.
-        observable_states (list): A list containing the name of each observable state.
-        hidden_states (list): A list containing the name of each hidden state.
-        path (np.array): The output path for given input sequence.
-        delta (np.array): A matrix of the delta values.
-        phi (numpy.array): A matrix of the phi values.
-
-Classes
--------
-
-`HiddenMarkovModel(observable_states, hidden_states, transition_matrix, emission_matrix, title='HMM')`
-:   Initialization function for HiddenMarkovModel
-    
-    Attributes:
-        observable_states (list): A list containing the name of each observable state.
-        hidden_states (list): A list containing the name of each hidden state.
-        transition_matrix (2-D list): A matrix containing the transition probabilities.
-        emission_matrix (2-D list): A matrix containing the emission probabilities.
-        title (str): Title for the HMM project. Output files will be named with this attribute.
-
-### Methods
-
-`backward(self, input_seq)`
-:   Runs the Backward Algorithm.
-
-    Args:
-        input_seq (list): A list of the observed input sequence.
-
-    Returns:
-        beta (np.array): A matrix of the beta values.
-        probs (numpy.float64): The computed probability of the input sequence.
-
-`forward(self, input_seq)`
-:   Runs the Forward Algorithm.
-
-    Args:
-        input_seq (list): A list of the observed input sequence.
-
-    Returns:
-        alpha (np.array): A matrix of the alpha values.
-        probs (numpy.float64): The computed probability of the input sequence.
-
-`print_model_info(self)`
-:   Prints the model in a readable manner.
-
-`visualize_model(self, output_dir='outputs', notebook=False)`
-:   Creates a transition and emission graph of the model.
-
-    Args:
-        output_dir (str): A directory will be created with this name. If the directory already exists then an error will be raised.
-        notebook (bool): Whether the model should be visualized for a notebook or a script. If False, then a png will be displayed. If True then the output will be displayed in the IPython cell.
-
-`viterbi(self, input_seq)`
-:   Runs the Viterbi Algorithm.
-
-    Args:
-        input_seq (list): A list of the observed input sequence.
-
-    Returns:
-        path (np.array): The output path for given input sequence.
-        delta (np.array): A matrix of the delta values.
-        phi (numpy.array): A matrix of the phi values.
+4. [Markov Chains Clearly Explained!](https://www.youtube.com/playlist?list=PLM8wYQRetTxBkdvBtz-gw8b9lcVkdXQKV)
